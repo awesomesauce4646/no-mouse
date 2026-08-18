@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://c7taua8fvc0qj"]
+
+[ext_resource type="Script" uid="uid://ji25c0pufqvj" path="res://scripts/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="FontFile" uid="uid://cc047axbev62i" path="res://BagelFatOne-Regular.ttf" id="1_l6cm7"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_ekxnf"]
+device = -1
+keycode = 4194309
+
+[sub_resource type="Shortcut" id="Shortcut_bqqt6"]
+events = [SubResource("InputEventKey_ekxnf")]
+
+[node name="Main Menu" type="Node2D" unique_id=1379960931]
+script = ExtResource("1_ekxnf")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1350511140]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.8622624, 0.8452946, 0.84954286, 1)
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1115230575]
+clip_contents = false
+offset_left = 169.0
+offset_top = 53.0
+offset_right = 1023.0
+offset_bottom = 297.0
+theme_override_constants/outline_size = 50
+theme_override_fonts/normal_font = ExtResource("1_l6cm7")
+theme_override_font_sizes/normal_font_size = 150
+text = "NO MOUSE!"
+
+[node name="Info" type="RichTextLabel" parent="." unique_id=333518602]
+clip_contents = false
+offset_left = 81.0
+offset_top = 501.0
+offset_right = 1074.0
+offset_bottom = 637.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("1_l6cm7")
+theme_override_font_sizes/normal_font_size = 40
+text = "you  have  no  mouse.  you  can  only  use  your  keyboard.
+										   		a  puzzle  game."
+
+[node name="Play" type="Button" parent="." unique_id=817265353]
+offset_left = 301.0
+offset_top = 304.0
+offset_right = 822.0
+offset_bottom = 459.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 50
+shortcut = SubResource("Shortcut_bqqt6")
+text = "press ENTER to play"

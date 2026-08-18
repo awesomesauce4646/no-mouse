@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://boj7g2sascp6d"]
+
+[ext_resource type="FontFile" uid="uid://cc047axbev62i" path="res://BagelFatOne-Regular.ttf" id="1_014kd"]
+[ext_resource type="Script" uid="uid://pow5sl131p0j" path="res://scripts/level_1.gd" id="1_rus8k"]
+[ext_resource type="Script" uid="uid://db2wgvwkxtrdq" path="res://scripts/end_2.gd" id="2_5xbjy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7304a"]
+size = Vector2(88, 86)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kptrr"]
+size = Vector2(163.5, 166)
+
+[sub_resource type="InputEventKey" id="InputEventKey_bswci"]
+device = -1
+keycode = 72
+unicode = 104
+
+[sub_resource type="Shortcut" id="Shortcut_bswci"]
+events = [SubResource("InputEventKey_bswci")]
+
+[node name="Level 1" type="Node2D" unique_id=1836816707]
+script = ExtResource("1_rus8k")
+
+[node name="Background" type="ColorRect" parent="." unique_id=21051326]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.8622624, 0.8452946, 0.84954286, 1)
+
+[node name="Piece" type="Node2D" parent="." unique_id=1489737465]
+position = Vector2(83, 244)
+
+[node name="Color" type="ColorRect" parent="Piece" unique_id=1957519486]
+offset_right = 88.0
+offset_bottom = 86.0
+
+[node name="Area2D" type="Area2D" parent="Piece" unique_id=1937666126]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piece/Area2D" unique_id=456659951]
+position = Vector2(44, 43)
+shape = SubResource("RectangleShape2D_7304a")
+
+[node name="End" type="Node2D" parent="." unique_id=893544959]
+position = Vector2(83, 244)
+script = ExtResource("2_5xbjy")
+
+[node name="End" type="ColorRect" parent="End" unique_id=1096175631]
+offset_left = 805.0
+offset_top = -46.0
+offset_right = 968.0
+offset_bottom = 120.0
+color = Color(0.9449135, 0.7964597, 1.1551381e-06, 1)
+
+[node name="Area2D" type="Area2D" parent="End" unique_id=561160941]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="End/Area2D" unique_id=453507641]
+position = Vector2(886.25, 37)
+shape = SubResource("RectangleShape2D_kptrr")
+
+[node name="Info" type="RichTextLabel" parent="." unique_id=659719213]
+clip_contents = false
+offset_left = 219.0
+offset_top = 563.0
+offset_right = 1118.0
+offset_bottom = 715.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("1_014kd")
+theme_override_font_sizes/normal_font_size = 40
+text = "bring the box to the golden zone"
+horizontal_alignment = 1
+
+[node name="Hint" type="Button" parent="." unique_id=865443668]
+offset_left = 9.0
+offset_top = 556.0
+offset_right = 174.0
+offset_bottom = 637.0
+theme_override_fonts/font = ExtResource("1_014kd")
+theme_override_font_sizes/font_size = 50
+shortcut = SubResource("Shortcut_bswci")
+text = "(H)INT"
+
+[connection signal="end_touched" from="End" to="." method="_on_end_end_touched"]
