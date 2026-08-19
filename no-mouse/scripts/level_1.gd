@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 		move_step()
 		
 	if won == true:
-		get_tree().change_scene_to_file("res://scenes/level_2.tscn")
+		get_tree().change_scene_to_file("res://scenes/completion_screen.tscn")
 
 func move_step() -> void:
 	is_moving = true

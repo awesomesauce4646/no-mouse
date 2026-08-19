@@ -1,3 +1,138 @@
 [gd_scene format=3 uid="uid://d16gc7q6tiokt"]
 
+[ext_resource type="FontFile" uid="uid://cc047axbev62i" path="res://BagelFatOne-Regular.ttf" id="1_3bmlt"]
+[ext_resource type="Script" uid="uid://br5mlogpgtavv" path="res://scripts/level_2.gd" id="1_jm1iu"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_jm1iu"]
+device = -1
+keycode = 67
+unicode = 99
+
+[sub_resource type="Shortcut" id="Shortcut_y0kc7"]
+events = [SubResource("InputEventKey_jm1iu")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_pbc48"]
+device = -1
+keycode = 65
+unicode = 97
+
+[sub_resource type="Shortcut" id="Shortcut_b4j7a"]
+events = [SubResource("InputEventKey_pbc48")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_eqxsl"]
+device = -1
+keycode = 84
+unicode = 116
+
+[sub_resource type="Shortcut" id="Shortcut_mvver"]
+events = [SubResource("InputEventKey_eqxsl")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_b4j7a"]
+device = -1
+keycode = 83
+unicode = 115
+
+[sub_resource type="Shortcut" id="Shortcut_pbc48"]
+events = [SubResource("InputEventKey_b4j7a")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_bswci"]
+device = -1
+keycode = 72
+unicode = 104
+
+[sub_resource type="Shortcut" id="Shortcut_jm1iu"]
+events = [SubResource("InputEventKey_bswci")]
+
 [node name="Level 2" type="Node2D" unique_id=1978686110]
+script = ExtResource("1_jm1iu")
+
+[node name="Background" type="ColorRect" parent="." unique_id=106987811]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.8622624, 0.8452946, 0.84954286, 1)
+
+[node name="Board" type="ColorRect" parent="." unique_id=468003398]
+offset_left = 150.0
+offset_top = 42.0
+offset_right = 1003.0
+offset_bottom = 284.0
+color = Color(0, 0, 0, 1)
+
+[node name="BoardInside" type="ColorRect" parent="Board" unique_id=2099154346]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 22.0
+offset_right = 829.0
+offset_bottom = 216.0
+color = Color(0.19793725, 0.19793722, 0.19793722, 1)
+
+[node name="Info" type="RichTextLabel" parent="." unique_id=571281450]
+clip_contents = false
+offset_left = 219.0
+offset_top = 563.0
+offset_right = 1118.0
+offset_bottom = 715.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("1_3bmlt")
+theme_override_font_sizes/normal_font_size = 40
+text = "spelling bee"
+horizontal_alignment = 1
+
+[node name="Letter1" type="Button" parent="." unique_id=1698451825]
+offset_left = 325.0
+offset_top = 133.0
+offset_right = 373.0
+offset_bottom = 200.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_3bmlt")
+theme_override_font_sizes/font_size = 40
+shortcut = SubResource("Shortcut_y0kc7")
+text = "c"
+flat = true
+
+[node name="Letter2" type="Button" parent="." unique_id=1130419220]
+offset_left = 468.0
+offset_top = 133.0
+offset_right = 516.0
+offset_bottom = 198.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_3bmlt")
+theme_override_font_sizes/font_size = 40
+shortcut = SubResource("Shortcut_b4j7a")
+text = "a"
+flat = true
+
+[node name="Letter3" type="Button" parent="." unique_id=999750665]
+offset_left = 611.0
+offset_top = 133.0
+offset_right = 659.0
+offset_bottom = 198.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_3bmlt")
+theme_override_font_sizes/font_size = 40
+shortcut = SubResource("Shortcut_mvver")
+text = "t"
+flat = true
+
+[node name="Letter4" type="Button" parent="." unique_id=1504141563]
+offset_left = 761.0
+offset_top = 133.0
+offset_right = 809.0
+offset_bottom = 198.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_3bmlt")
+theme_override_font_sizes/font_size = 40
+shortcut = SubResource("Shortcut_pbc48")
+text = "s"
+flat = true
+
+[node name="Hint" type="Button" parent="." unique_id=869326526]
+offset_left = 9.0
+offset_top = 556.0
+offset_right = 174.0
+offset_bottom = 637.0
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("1_3bmlt")
+theme_override_font_sizes/font_size = 50
+shortcut = SubResource("Shortcut_jm1iu")
+text = "(H)INT"
