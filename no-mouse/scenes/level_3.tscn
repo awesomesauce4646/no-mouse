@@ -1,8 +1,60 @@
 [gd_scene format=3 uid="uid://bq5y42nl3nk7q"]
 
+[ext_resource type="FontFile" uid="uid://cc047axbev62i" path="res://BagelFatOne-Regular.ttf" id="1_70nk6"]
+[ext_resource type="Script" uid="uid://cxmf4omyuruqt" path="res://scenes/level_3.gd" id="1_uwxec"]
+[ext_resource type="Texture2D" uid="uid://wmip06jo7did" path="res://x-mark-128.png" id="3_1pn4d"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_uwxec"]
+device = -1
+keycode = 72
+unicode = 104
+
+[sub_resource type="Shortcut" id="Shortcut_uwxec"]
+events = [SubResource("InputEventKey_uwxec")]
+
 [node name="Level 3" type="Node2D" unique_id=762802901]
+script = ExtResource("1_uwxec")
 
 [node name="Background" type="ColorRect" parent="." unique_id=468770410]
 offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0.8622624, 0.8452946, 0.84954286, 1)
+
+[node name="Hint" type="Button" parent="." unique_id=452149203]
+offset_left = 9.0
+offset_top = 556.0
+offset_right = 174.0
+offset_bottom = 637.0
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("1_70nk6")
+theme_override_font_sizes/font_size = 50
+shortcut = SubResource("Shortcut_uwxec")
+text = "(H)INT"
+
+[node name="Info" type="RichTextLabel" parent="." unique_id=616886285]
+clip_contents = false
+offset_left = 219.0
+offset_top = 563.0
+offset_right = 1118.0
+offset_bottom = 715.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("1_70nk6")
+theme_override_font_sizes/normal_font_size = 40
+text = "x marks the spot!"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=153213790]
+offset_left = 292.0
+offset_top = 83.0
+offset_right = 874.0
+offset_bottom = 431.0
+color = Color(0.9999998, 0.8512645, 0.5898085, 1)
+
+[node name="X" type="TextureRect" parent="." unique_id=1669391322]
+visible = false
+offset_left = 352.0
+offset_top = 325.0
+offset_right = 415.0
+offset_bottom = 387.0
+texture = ExtResource("3_1pn4d")
+expand_mode = 1
