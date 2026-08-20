@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://drk2ng4m5ag0w"]
 
-[ext_resource type="Script" uid="uid://dij2jn85ap2ww" path="res://timer.gd" id="1_ye2uk"]
+[ext_resource type="Script" uid="uid://dij2jn85ap2ww" path="res://scripts/timer.gd" id="1_ye2uk"]
 [ext_resource type="FontFile" uid="uid://cc047axbev62i" path="res://BagelFatOne-Regular.ttf" id="2_o6fnk"]
 
 [node name="Timer" type="Node2D" unique_id=1216461691]

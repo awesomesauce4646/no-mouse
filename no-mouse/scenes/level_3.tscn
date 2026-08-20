@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bq5y42nl3nk7q"]
 
 [ext_resource type="FontFile" uid="uid://cc047axbev62i" path="res://BagelFatOne-Regular.ttf" id="1_70nk6"]
-[ext_resource type="Script" uid="uid://cxmf4omyuruqt" path="res://scenes/level_3.gd" id="1_uwxec"]
+[ext_resource type="Script" uid="uid://cxmf4omyuruqt" path="res://scripts/level_3.gd" id="1_uwxec"]
 [ext_resource type="Texture2D" uid="uid://wmip06jo7did" path="res://x-mark-128.png" id="3_1pn4d"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_uwxec"]

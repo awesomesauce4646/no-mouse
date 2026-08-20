@@ -21,4 +21,7 @@ level " + str(Global.level) + "
 completed! "
 	if timer_end == true:
 		Global.level += 1
-		get_tree().change_scene_to_file("res://scenes/level_" + str(Global.level) + ".tscn")
+		if Global.level < 5:
+			get_tree().change_scene_to_file("res://scenes/level_" + str(Global.level) + ".tscn")
+		else:
+			get_tree().change_scene_to_file("res://scenes/win_screen.tscn")

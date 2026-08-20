@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://ctrgyeykyil0v"]
+
+[ext_resource type="FontFile" uid="uid://cc047axbev62i" path="res://BagelFatOne-Regular.ttf" id="1_wv5lq"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_ekxnf"]
+device = -1
+keycode = 4194309
+
+[sub_resource type="Shortcut" id="Shortcut_erk2x"]
+events = [SubResource("InputEventKey_ekxnf")]
+
+[node name="Win Screen" type="Node2D" unique_id=1243946047]
+
+[node name="Background" type="ColorRect" parent="." unique_id=1525732697]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.8622624, 0.8452946, 0.84954286, 1)
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=901970523]
+clip_contents = false
+offset_left = 216.0
+offset_top = 55.0
+offset_right = 939.0
+offset_bottom = 280.0
+theme_override_constants/outline_size = 50
+theme_override_fonts/normal_font = ExtResource("1_wv5lq")
+theme_override_font_sizes/normal_font_size = 150
+text = "VICTORY!"
+
+[node name="Info" type="RichTextLabel" parent="." unique_id=984451079]
+clip_contents = false
+offset_left = 95.0
+offset_top = 295.0
+offset_right = 1049.0
+offset_bottom = 488.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("1_wv5lq")
+theme_override_font_sizes/normal_font_size = 40
+text = "thanks for playing :)
+made for hack club tabbed
+feedback appreciated!"
+horizontal_alignment = 1
+
+[node name="Play" type="Button" parent="." unique_id=1698842856]
+offset_left = 18.0
+offset_top = 548.0
+offset_right = 493.0
+offset_bottom = 629.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_wv5lq")
+theme_override_font_sizes/font_size = 50
+shortcut = SubResource("Shortcut_erk2x")
+text = "ALT F4 to leave"
+
+[node name="Play2" type="Button" parent="." unique_id=1175256555]
+offset_left = 655.0
+offset_top = 548.0
+offset_right = 1130.0
+offset_bottom = 629.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("1_wv5lq")
+theme_override_font_sizes/font_size = 50
+shortcut = SubResource("Shortcut_erk2x")
+text = "(or switch tabs)"

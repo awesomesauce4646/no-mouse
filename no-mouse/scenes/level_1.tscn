@@ -4,11 +4,11 @@
 [ext_resource type="Script" uid="uid://pow5sl131p0j" path="res://scripts/level_1.gd" id="1_rus8k"]
 [ext_resource type="Script" uid="uid://db2wgvwkxtrdq" path="res://scripts/end_2.gd" id="2_5xbjy"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7304a"]
-size = Vector2(88, 86)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kptrr"]
 size = Vector2(163.5, 166)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7304a"]
+size = Vector2(88, 86)
 
 [sub_resource type="InputEventKey" id="InputEventKey_bswci"]
 device = -1
@@ -26,6 +26,25 @@ offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0.8622624, 0.8452946, 0.84954286, 1)
 
+[node name="End" type="Node2D" parent="." unique_id=893544959]
+position = Vector2(83, 244)
+script = ExtResource("2_5xbjy")
+
+[node name="End" type="ColorRect" parent="End" unique_id=1096175631]
+offset_left = 776.0
+offset_top = -44.0
+offset_right = 939.0
+offset_bottom = 122.0
+color = Color(0.9449135, 0.7964597, 1.1551381e-06, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="End" unique_id=561160941]
+position = Vector2(-29, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="End/Area2D" unique_id=453507641]
+position = Vector2(886.25, 37)
+shape = SubResource("RectangleShape2D_kptrr")
+
 [node name="Piece" type="Node2D" parent="." unique_id=1489737465]
 position = Vector2(83, 244)
 
@@ -38,23 +57,6 @@ offset_bottom = 86.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Piece/Area2D" unique_id=456659951]
 position = Vector2(44, 43)
 shape = SubResource("RectangleShape2D_7304a")
-
-[node name="End" type="Node2D" parent="." unique_id=893544959]
-position = Vector2(83, 244)
-script = ExtResource("2_5xbjy")
-
-[node name="End" type="ColorRect" parent="End" unique_id=1096175631]
-offset_left = 805.0
-offset_top = -46.0
-offset_right = 968.0
-offset_bottom = 120.0
-color = Color(0.9449135, 0.7964597, 1.1551381e-06, 1)
-
-[node name="Area2D" type="Area2D" parent="End" unique_id=561160941]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="End/Area2D" unique_id=453507641]
-position = Vector2(886.25, 37)
-shape = SubResource("RectangleShape2D_kptrr")
 
 [node name="Info" type="RichTextLabel" parent="." unique_id=659719213]
 clip_contents = false

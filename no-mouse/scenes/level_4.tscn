@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://djgay4it84ncf"]
+
+[ext_resource type="Script" uid="uid://bkhhw4e0bdg28" path="res://scripts/level_4.gd" id="1_6malg"]
+[ext_resource type="FontFile" uid="uid://cc047axbev62i" path="res://BagelFatOne-Regular.ttf" id="1_huvaw"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_bswci"]
+device = -1
+keycode = 72
+unicode = 104
+
+[sub_resource type="Shortcut" id="Shortcut_6malg"]
+events = [SubResource("InputEventKey_bswci")]
+
+[node name="Level 4" type="Node2D" unique_id=712306676]
+script = ExtResource("1_6malg")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1916332910]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.8622624, 0.8452946, 0.84954286, 1)
+
+[node name="Hint" type="Button" parent="." unique_id=2055064925]
+offset_left = 9.0
+offset_top = 556.0
+offset_right = 177.0
+offset_bottom = 637.0
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("1_huvaw")
+theme_override_font_sizes/font_size = 50
+shortcut = SubResource("Shortcut_6malg")
+text = "(H)INT"
+
+[node name="Info" type="RichTextLabel" parent="." unique_id=135443229]
+clip_contents = false
+offset_left = 219.0
+offset_top = 563.0
+offset_right = 1118.0
+offset_bottom = 715.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("1_huvaw")
+theme_override_font_sizes/normal_font_size = 40
+text = "find the word"
+horizontal_alignment = 1
+
+[node name="Board" type="ColorRect" parent="." unique_id=691136818]
+offset_left = 167.0
+offset_top = 90.0
+offset_right = 974.0
+offset_bottom = 284.0
+
+[node name="Line1" type="ColorRect" parent="Board" unique_id=828045107]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 53.0
+offset_right = 732.0
+offset_bottom = 59.0
+color = Color(0, 0, 0, 1)
+
+[node name="Line2" type="ColorRect" parent="Board" unique_id=1514977420]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 92.0
+offset_right = 732.0
+offset_bottom = 98.0
+color = Color(0, 0, 0, 1)
+
+[node name="Line3" type="ColorRect" parent="Board" unique_id=1045081742]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 131.0
+offset_right = 732.0
+offset_bottom = 137.0
+color = Color(0, 0, 0, 1)
+
+[node name="Word" type="RichTextLabel" parent="." unique_id=78035374]
+visible = false
+clip_contents = false
+offset_left = 246.0
+offset_top = 93.0
+offset_right = 434.0
+offset_bottom = 165.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("1_huvaw")
+theme_override_font_sizes/normal_font_size = 40
+text = "holy moly"
+horizontal_alignment = 1

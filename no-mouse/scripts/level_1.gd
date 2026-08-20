@@ -15,13 +15,17 @@ func _process(delta: float) -> void:
 		move_step()
 		
 	if won == true:
+		info.text = "yo tuff!"
+		await get_tree().create_timer(1).timeout
 		get_tree().change_scene_to_file("res://scenes/completion_screen.tscn")
 
 func move_step() -> void:
-	is_moving = true
-	box.position += Vector2(100, 0)
-	await get_tree().create_timer(0.2).timeout
-	is_moving = false
+	if !won:
+		is_moving = true
+		box.position += Vector2(135, 0)
+		await get_tree().create_timer(0.2).timeout
+		is_moving = false
+		
 
 func change_hint_text() -> void:
 	if hint == false:
